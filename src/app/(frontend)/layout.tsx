@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import { Metadata } from "next";
 import { SanityLive } from '@/sanity/lib/live'
+import { Header } from "@/components/Header";
 
 
 export const metadata: Metadata = {
@@ -15,8 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-    {children}
-    <SanityLive />
+      <Header />
+      {children}
+      <SanityLive />
     </>
   );
 }
